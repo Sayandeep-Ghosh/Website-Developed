@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/HTML/Cars/Catagories/con_style.css">
+  <title>Lamborghini Aventador</title>
+</head>
+<body onload = "slide()">
+  <div class="background">
+    <div class="slide">
+      <img src="/HTML/Cars/Catagories/lamborghini/img1.jpg" id="slideImg">
+    </div>
+    <div class="content">
+      <div class="heading"><h1>lamborghini aventador</h1></div>
+      <div class="description">
+        <div>
+          <h2>Engine and Performance</h2>
+          <p>Lamborghini Aventador is the first iteration of Aventador series with V12 6498 cc engine, 740 HP, 690NM maximum torque. It catches top speed of 350kmph, mileage in city 3.81kmph(approx.) and in highway 8.62kmph(approx) 0-100 in 2.9s. Carbon-ceramic discs ventilated and cross drilled with 400mm diameter,38mm thicknessin front and 380mm, 38mm thickness in rear brakes respectively.</p>
+        </div>
+        <div>
+          <h2>Interior and Comfort</h2>
+          <p>Aventador has offered in a two-tone finish, with options according to user sensibilities, Sporty or Elegant, available. Top notch finish of the dashboard along with suede-leather finished steering options makes the Aventador one of the best-looking Lamborghini machines from the inside as well. In the comfort an iPod and USB interfance is standard for a car that has the speedometer all the way up to 370kmph. A full-fledged computer board, instrument panel TFT, adjustable seats all around and a high quality premium leather finish to the upholstery all add to the appeal of the interior.</p>
+        </div>
+        <div>
+          <h2>Safety Features</h2>
+          <p>Airbags in driver, passenger and side airbags. Knee airbags only for specific markets.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var slideImg = document.getElementById("slideImg");
+    var lamborghini = new Array(
+      "img1.jpg",
+      "img2.webp",
+      "img3.jpg",
+      "img4.jpg"
+    );
+    var len = lamborghini.length;
+    var i = 0;
+    function slide(){
+      if(i > len-1){
+        i = 0;
+      }
+      slideImg.src = lamborghini[i];
+      i++;
+      setTimeout("slide()", 4000);
+    }
+  </script>
+</body>
+</html>

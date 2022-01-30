@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/css/ford_style.css"> -->
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.background{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.slide{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+#slideImg{
+  width: 100%;
+  height: 100%;
+  /* animation: zoom 3s linear infinite; */
+}
+/*@keyframes zoom{
+  0%{
+    transform: scale(1.3);
+  }
+  15%{
+    transform: scale(1);
+  }
+  85%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.3);
+  }
+}*/
+.content{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6));
+  top: 0;
+}
+.heading{
+  width: 100%;
+  margin: 30px;
+  text-align: center;
+  color: #ffff;
+}
+.heading h1{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.description{
+  width: 85%;
+  align-items: center;
+  margin: 20px auto 0;
+  color: #ffff;
+}
+.description h2{
+  margin-top: 15px;
+  font-size: 25px;
+  font-style: italic;
+  text-decoration: underline;
+}
+.description p{
+  margin-top: 10px;
+  line-height: 0.6cm;
+  font-size: 15px;
+}
+
+
+
+  </style>
+  <title>Ford Shelby GT500</title>
+</head>
+<body onload = "slide()">
+  <div class="background">
+    <div class="slide">
+      <img src="/HTML/Cars/Catagories/ford/Mustang1.jpg" id="slideImg">
+    </div>
+    <div class="content">
+      <div class="heading"><h1>mustang shelby gt500</h1></div>
+      <div class="description">
+        <div>
+          <h2>Engine and Performance</h2>
+          <p>The most powerful engine ever stuffed into a Ford production car lurks behind the Shelby GT500 menacing mug. The motor is a supercharged 5.2-liter V-8 that summons 750 horsepower and 625 pound-feet of torque. That clutch automatic transmission. After tested GT500 with its standard summer tires as includes 20-inch carbon-fiber wheels, comparison test with the 650hp Chevy Camaro ZL1 1LE and 797hp Dodge Challenger SRT Hellcat. During testing the Shelby's base wheel-and-tire setup actually provided better acceleration (hitting 60 mph in 3.4 seconds versus 3.6), the upgraded rolling stock contributed to higher cornering grip (1.13 g versus 0.99) and a shorter stop from 70 mph (142 feet versus 150). Optimized for racetrack duty, the Shelby GT500 proved that modern muscle cars can post quicker lap times than more exotic machines.</p>
+        </div>
+        <div>
+          <h2>Infotainment and Connectivity</h2>
+          <p>The infotainment system in the Shelby GT500 is very similar to what’s found in the regular Mustang: an 8.0-inch touchscreen that supports Ford's Sync 3 software. Along with steering-wheel control and voice commands, the stereo's volume and tuning functions can be controlled with physical knobs. Thanks, Ford. Desirable standard connectivity features include Apple CarPlay, Android Auto, and a subscription-based Wi-Fi hotspot. A 12-speaker B&O sound system is available for drivers who want to complement the supercharged V-8's thundering soundtrack with beats of their own.</p>
+        </div>
+        <div>
+          <h2>Interior and Comfort</h2>
+          <p>The Shelby Mustang's interior is very similar to that of its mainstream counterpart. Although they share a design and have comparable passenger and cargo space, the GT500 offers options such as carbon-fiber instrument panel trim and more-aggressive, Shelby-specific Recaro front buckets along with a roster of desirable standard features. The latter includes a configurable 12.0-inch fully digital gauge cluster, dual-zone climate control, leather-trimmed front seats with heated and cooled cushions, and a six-way power driver's seat. Shoppers who prefer a more supportive pair of front buckets, albeit without the aforementioned functions, can opt for leather-trimmed Recaros.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var slideImg = document.getElementById("slideImg");
+    var ford = new Array(
+      "Mustang1.jpg",
+      "Mustang2.jpg",
+      "Mustang3.jpg",
+      "Mustang4.jpg"
+    );
+    var len = ford.length;
+    var i = 0;
+    function slide(){
+      if(i > len-1){
+        i = 0;
+      }
+      slideImg.src = ford[i];
+      i++;
+      setTimeout("slide()", 4000);
+    }
+  </script>
+</body>
+</html>

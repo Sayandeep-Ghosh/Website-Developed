@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/HTML/Cars/Catagories/con_style.css">
+  <title>Porsche Spyder 918</title>
+</head>
+<body onload = "slide()">
+  <div class="background">
+    <div class="slide">
+      <img src="/HTML/Cars/Catagories/porsche/img1.jpg" id="slideImg">
+    </div>
+    <div class="content">
+      <div class="heading"><h1>Spyder 918</h1></div>
+      <div class="description">
+        <div>
+          <h2>Engine and Performance</h2>
+          <p></p>
+        </div>
+        <div>
+          <h2>Interior and Comfort</h2>
+          <p></p>
+        </div>
+        <div>
+          <h2>Safety Features</h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var slideImg = document.getElementById("slideImg");
+    var porsche = new Array(
+      "img1.jpg",
+      "img2.jpg",
+      "img3.jpg",
+      "img4.jpg"
+    );
+    var len = porsche.length;
+    var i = 0;
+    function slide(){
+      if(i > len-1){
+        i = 0;
+      }
+      slideImg.src = porsche[i];
+      i++;
+      setTimeout("slide()", 4000);
+    }
+  </script>
+</body>
+</html>
